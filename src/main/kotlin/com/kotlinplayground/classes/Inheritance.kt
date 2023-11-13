@@ -1,30 +1,40 @@
 package com.kotlinplayground.classes
 
-open class User(val name: String) {
-    open var isLoggedIn: Boolean = false
-    open fun login() {
+open class User(val name : String){
+    open var isLoggedIn : Boolean = false
+    open fun login(){
+        println("Inside user Login")
+    }
+    private fun secret(){
         println("Inside user Login")
     }
 
+    protected open fun logout(){
+        println("Inside user Login")
+    }
 }
 
-open class abc
 
-class Student(name: String) : User(name) {
-    override var isLoggedIn: Boolean = false
+class Student(name : String) : User(name){
+    override var isLoggedIn : Boolean = false
 
     companion object {
-        val noOfEnrolledCourses = 10
+        const val noOfEnrolledCourses = 10
         fun country() = "USA"
     }
-
-    override fun login() {
+    override fun login(){
         println("Inside Student Login")
         super.login()
     }
+
+    public override fun logout(){
+        super.logout()
+        println("Inside Student logout")
+
+    }
 }
 
-class Instructor(name: String) : User(name)
+class Instructor(name : String) : User(name)
 
 fun main() {
 
@@ -33,8 +43,10 @@ fun main() {
     student.login()
     student.isLoggedIn = true
     println("Logged in values is : ${student.isLoggedIn}")
+    student.logout()
 
-    val country = Student.country() //this is a static function because of 'companion object'
+
+    val country = Student.country()
     println("Country is : $country")
 
     println("noOfEnrolledCourses is : ${Student.noOfEnrolledCourses}")
@@ -42,4 +54,7 @@ fun main() {
     val instructor = Instructor("Dilip")
     println("name is : ${instructor.name}")
     instructor.login()
+
+    val user = User("Dilip")
+
 }
