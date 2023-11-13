@@ -19,7 +19,8 @@ fun checkType(type: Any) {
 fun castNumber(any : Any) {
 
     when(any){
-        any as Double -> println("Value is Double")
+        any as? Double -> println("Value is Double")
+        any as? Int -> println("Value is Int")
     }
 }
 
@@ -34,7 +35,7 @@ fun main() {
     checkType("DILIP")
 
     castNumber(1.0)
-    //castNumber(1)
+    castNumber(1)
 
     val number = 1
     val numberDouble = number.toDouble()
