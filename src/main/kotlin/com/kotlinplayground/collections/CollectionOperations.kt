@@ -5,6 +5,9 @@ import com.kotlinplayground.dataset.CourseCategory
 import com.kotlinplayground.dataset.KAFKA
 import com.kotlinplayground.dataset.courseList
 
+val devPredicate = { c: Course -> c.category == CourseCategory.DEVELOPEMENT }
+
+
 fun main() {
     val courseList = courseList()
 
@@ -33,7 +36,24 @@ fun main() {
     val courses = exploreFlatMap(courseList, KAFKA)
     println("courses : $courses")*/
 
-    exploreHashMap()
+    //exploreHashMap()
+    collections_nullablity()
+}
+
+fun collections_nullablity() {
+
+    var list : MutableList<String>? = null
+    list = mutableListOf()
+    list.add("Dilip")
+    list.forEach {
+        println("Value is : $it")
+    }
+
+    val list1 : List<String?> = listOf("Adam", null, "Alex")
+    list1.forEach {
+        println("Value Length is : ${it?.length}")
+    }
+
 }
 
 fun exploreHashMap() {
