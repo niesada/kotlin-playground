@@ -15,7 +15,7 @@ fun main() {
     println("namesListUsingSequence : $namesListUsingSequence")
     val devPredicate = { c: Course -> c.category == CourseCategory.DEVELOPEMENT }
 
-    exploreFilterUsingSequence(courseList(),devPredicate )
+    exploreFilterUsingSequence(courseList(), devPredicate )
 
     val range = 1..1000_000_000
 
