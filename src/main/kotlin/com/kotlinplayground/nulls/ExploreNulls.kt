@@ -5,7 +5,7 @@ data class Movie(
     val id : Int?,
     val name : String)
 
-fun printName(name: String){
+fun printName(name: String?){
     println("Name is : $name")
 }
 
@@ -23,10 +23,10 @@ fun main() {
         printName(this)
     }
     println("Value is : ${nameNullable?.length}") // safe operator , ?
-    nameNullable = "Alex"
-    //val length = nameNullable?.length?.toLong() ?: 0 //?: Elvis operator
+//    nameNullable = "Alex"
+    val length = nameNullable?.length?.toLong() ?: 0 //?: Elvis operator
 
-    val length = nameNullable.length.toLong() //?: Elvis operator
+//    val length = nameNullable.length.toLong() //?: Elvis operator
     println("length : $length")
 
     /*if(nameNullable!=null){

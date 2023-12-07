@@ -2,7 +2,7 @@ package com.kotlinplayground.basics
 
 fun main() {
 
-    /* val range = 1..10
+     val range = 1..10
      for (i in range){
          println("i : $i")
      }
@@ -14,9 +14,9 @@ fun main() {
 
      for (i in reverseRange step 2){
          println("reverseRange with Skip: $i")
-     }*/
-    exploreWhile()
-    exploreDoWhile()
+     }
+//    exploreWhile()
+//    exploreDoWhile()
 }
 
 fun exploreDoWhile() {

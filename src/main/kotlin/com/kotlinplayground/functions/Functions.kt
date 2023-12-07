@@ -30,13 +30,13 @@ fun lambda(){
 
 fun main() {
 
-//    /*val unit = printName("Dilip")
-//    println("unit is $unit")
-//    val result = addition(1, 2)
-//    println("Result is $result")
-//
-//    val result1 = addition_approach1(1, 2)
-//    println("Result is $result1")*/
+    val unit = printName("Dilip")
+    println("unit is $unit")
+    val result = addition(1, 2)
+    println("Result is $result")
+
+    val result1 = addition_approach1(1, 2)
+    println("Result is $result1")
 
     printPersonDetails("Dilip", "abc@gmail.com", LocalDate.parse("2000-01-01"))
 
