@@ -4,7 +4,7 @@ package com.kotlinplayground.classes
 
 import com.kotlinplayground.CourseJava
 
-data class Course(
+data class Course @JvmOverloads constructor(
     val id: Int,
     val name: String,
     val author: String,

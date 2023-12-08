@@ -1,5 +1,6 @@
 package com.kotlinplayground;
 
+import com.kotlinplayground.classes.Authenticate;
 import com.kotlinplayground.classes.Course;
 import com.kotlinplayground.classes.CourseCategory;
 //import com.kotlinplayground.classes.CourseKt;
@@ -12,8 +13,10 @@ public class InvokeKotlinFromJava {
         new Course(
             1,
             "Reactive Programming in Modern Java using Project Reactor",
-            "Dilip",
-            CourseCategory.DEVELOPMENT);
+            "Dilip"
+//          ,
+//            CourseCategory.DEVELOPMENT
+        );
 
     course.noOfCourse = 11;
 
@@ -25,5 +28,8 @@ public class InvokeKotlinFromJava {
 
     Course.Companion.printName2("abc");
     Course.printName2("abc1");
+
+    Authenticate.INSTANCE.authenticate("Dilip", "abc");
+    Authenticate.authenticate("Dilip", "abc");
   }
 }
