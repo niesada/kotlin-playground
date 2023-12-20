@@ -17,10 +17,10 @@ fun main() {
 
 fun exploreRun() {
 
-    var numbers : MutableList<Int>? = null
+    var numbers: MutableList<Int>? = null
     val result = numbers.run {
         println("Inside run")
-        numbers = mutableListOf(1,2,3)
+        numbers = mutableListOf(1, 2, 3)
         numbers?.sum()
     }
     println("result in Run : $result")
@@ -29,6 +29,9 @@ fun exploreRun() {
 
 fun exploreWith() {
     val numbers = mutableListOf(1, 2, 3, 4, 5)
+    val newNumbers = numbers.plus(6)
+    val newNumbers1 = numbers + 7
+    println(newNumbers1)
 
     val result = with(numbers) {
         println("Size is ${size}")
@@ -74,6 +77,7 @@ fun exploreAlso() {
         }
         .also {
             println("Object is ready $it")
+            it.courseCategory = CourseCategory.MARKETING
         }
 
     println("course is : $course")

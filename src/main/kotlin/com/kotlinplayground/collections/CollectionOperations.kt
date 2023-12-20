@@ -14,29 +14,29 @@ fun main() {
     val devPredicate = { c: Course -> c.category == CourseCategory.DEVELOPEMENT }
     val desPredicate = { c: Course -> c.category == CourseCategory.DESIGN }
 
-   /* val list = listOf(listOf(1, 2, 3), listOf(4, 5, 6))
+//    val list = listOf(listOf(1, 2, 3), listOf(4, 5, 6))
+//
+//    val mapResult = list.map { outerList ->
+//        outerList.map {
+//            it.toDouble()
+//        }
+//    }
+//    println("mapResult : $mapResult")
+//
+//    val flatMapResult = list.flatMap { outerList ->
+//        outerList.map {
+//            it.toDouble()
+//        }
+//    }
+//    println("flatMapResult : $flatMapResult")
 
-    val mapResult = list.map { outerList ->
-        outerList.map {
-            it.toDouble()
-        }
-    }
-    println("mapResult : $mapResult")
+    exploreFilter(courseList, desPredicate)
 
-    val flatMapResult = list.flatMap { outerList ->
-        outerList.map {
-            it.toDouble()
-        }
-    }
-    println("flatMapResult : $flatMapResult")
+    exploreMap(courseList, devPredicate)
+//    val courses = exploreFlatMap(courseList, KAFKA)
+//    println("courses : $courses")
 
-    //exploreFilter(courseList, desPredicate)
-
-    //exploreMap(courseList, devPredicate)
-    val courses = exploreFlatMap(courseList, KAFKA)
-    println("courses : $courses")*/
-
-    //exploreHashMap()
+//    exploreHashMap()
     collections_nullablity()
 }
 

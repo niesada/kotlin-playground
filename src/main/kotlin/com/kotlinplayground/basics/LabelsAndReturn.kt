@@ -9,14 +9,14 @@ fun main() {
 
     label()
 
-    for(i in 1..5){
-        println("i in return $i")
-        if(i==3) return
-    }
+//    for(i in 1..5){
+//        println("i in return $i")
+//        if(i==3) return
+//    }
 
     println("End of the Program!")
 
-//    outerFunction()
+    outerFunction()
 }
 
 fun label() {
