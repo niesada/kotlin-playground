@@ -21,6 +21,8 @@ fun castNumber(any : Any) {
     when(any){
         any as? Double -> println("Value is Double")
         any as? Int -> println("Value is Int")
+//        is Double -> println("Value is Double")
+//        is Int -> println("Value is Int")
     }
 }
 

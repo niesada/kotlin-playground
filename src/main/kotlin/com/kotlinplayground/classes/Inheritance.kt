@@ -10,7 +10,7 @@ open class User(val name : String){
     }
 
     protected open fun logout(){
-        println("Inside user Login")
+        println("Inside user Logout")
     }
 }
 
