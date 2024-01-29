@@ -18,5 +18,5 @@ fun coinChange(coins: IntArray, amount: Int): Int {
 }
 
 fun main() {
-    println(coinChange(intArrayOf(3,3,5), 7));
+    println(coinChange(intArrayOf(1,3,5), 7));
 }
