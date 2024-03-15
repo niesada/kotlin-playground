@@ -20,7 +20,7 @@ fun main() {
     val range = 1..1000_000_000
 
     range
-        //.asSequence()
+        .asSequence()
         .map { it.toDouble() }
         .take(40)
         .forEach {

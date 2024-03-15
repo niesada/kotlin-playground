@@ -20,7 +20,7 @@ class Student(name : String) : User(name){
 
     companion object {
         const val noOfEnrolledCourses = 10
-        fun country() = "USA"
+        fun country() = "USA"   
     }
     override fun login(){
         println("Inside Student Login")

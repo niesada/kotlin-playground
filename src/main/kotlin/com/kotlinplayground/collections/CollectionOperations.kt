@@ -33,10 +33,10 @@ fun main() {
     exploreFilter(courseList, desPredicate)
 
     exploreMap(courseList, devPredicate)
-//    val courses = exploreFlatMap(courseList, KAFKA)
-//    println("courses : $courses")
+    val courses = exploreFlatMap(courseList, KAFKA)
+    println("courses : $courses")
 
-//    exploreHashMap()
+    exploreHashMap()
     collections_nullablity()
 }
 
