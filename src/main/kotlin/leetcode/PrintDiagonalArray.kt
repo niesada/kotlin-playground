@@ -11,13 +11,30 @@ fun printDiagonal(matrix: Array<IntArray>) {
     val numRows = matrix.size
     val numCols = matrix[0].size
 
-    for (sum in 0 until numRows + numCols - 1) {
+    for (j in 0 until numCols + numRows) {
+        var temp = j
         for (i in 0 until numRows) {
-            val j = sum - i
-            if (j in 0 until numCols && i < numRows && j < numCols) {
-                print("${matrix[i][j]} ")
+            if (temp >= 0 && i < numRows && temp < numCols) {
+                print("${matrix[i][temp]} ")
             }
+            temp--
         }
         println()
     }
 }
+
+
+//fun printDiagonal(matrix: Array<IntArray>) {
+//    val numRows = matrix.size
+//    val numCols = matrix[0].size
+//
+//    for (sum in 0 until numRows + numCols - 1) {
+//        for (i in 0 until numRows) {
+//            val j = sum - i
+//            if (j in 0 until numCols && i < numRows && j < numCols) {
+//                print("${matrix[i][j]} ")
+//            }
+//        }
+//        println()
+//    }
+//}
