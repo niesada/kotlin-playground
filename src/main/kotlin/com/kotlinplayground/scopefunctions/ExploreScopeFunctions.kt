@@ -30,6 +30,7 @@ fun exploreRun() {
 fun exploreWith() {
     val numbers = mutableListOf(1, 2, 3, 4, 5)
     val newNumbers = numbers.plus(6)
+    println(newNumbers)
     val newNumbers1 = numbers + 7
     println(newNumbers1)
 
