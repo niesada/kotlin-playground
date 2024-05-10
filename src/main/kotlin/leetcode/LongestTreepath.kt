@@ -35,6 +35,7 @@ fun main() {
     root.right = TreeNode(3)
     root.left?.left = TreeNode(4)
     root.left?.right = TreeNode(5)
+    root.left?.left?.left = TreeNode(6)
 
     // 找到最长路径
     val longestPath = findLongestPath(root)
